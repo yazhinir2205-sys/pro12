@@ -1,0 +1,23 @@
+name: CSS Pseudo-Class Selectors Autograding
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  autograding:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout student repository
+        uses: actions/checkout@v4
+
+      - name: Make test script executable
+        run: chmod +x test.sh
+
+      - name: Run CSS tests
+        run: ./test.sh
