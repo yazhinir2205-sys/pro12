@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pseudo-class selectors</title>
+    <title>Pseudo-class Selectors</title>
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="styles/normalize.css">
@@ -13,48 +13,50 @@
             margin: 2em;
         }
 
-        /* TODO 1: Make all hyperlinks bold */
-        
+        a {
+            font-weight: bold;
+        }
 
-        /* TODO 2: Make unvisited links green */
-        
+        a:link {
+            color: green;
+        }
 
-        /* TODO 3: Make links fuchsia when mouse is over them
-           or when they receive keyboard focus */
-        
+        a:hover,
+        a:focus {
+            color: fuchsia;
+        }
 
-        /* TODO 4: Make the first paragraph inside <main> bold */
-        
+        main p:first-child {
+            font-weight: bold;
+        }
 
-        /* TODO 5: Make the first letter of the first paragraph
-           150% larger */
-        
+        main p:first-child::first-letter {
+            font-size: 150%;
+        }
     </style>
 </head>
 
 <body>
 
-<main>
+    <main>
+        <p>Welcome to San Joaquin Valley Town Hall.</p>
 
-    <p>Welcome to San Joaquin Valley Town Hall.</p>
+        <p>We have some fascinating speakers for you this season!</p>
 
-    <p>We have some fascinating speakers for you this season!</p>
+        <ul>
+            <li>
+                <a href="speakers/toobin.html">Jeffrey Toobin</a>
+            </li>
 
-    <ul>
-        <li>
-            <a href="speakers/toobin.html">Jeffrey Toobin</a>
-        </li>
+            <li>
+                <a href="speakers/sorkin.html">Andrew Ross Sorkin</a>
+            </li>
 
-        <li>
-            <a href="speakers/sorkin.html">Andrew Ross Sorkin</a>
-        </li>
-
-        <li>
-            <a href="speakers/chua.html">Amy Chua</a>
-        </li>
-    </ul>
-
-</main>
+            <li>
+                <a href="speakers/chua.html">Amy Chua</a>
+            </li>
+        </ul>
+    </main>
 
 </body>
 </html>
